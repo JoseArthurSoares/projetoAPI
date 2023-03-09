@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var favoritosRepo: FavoritosRepositorio
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            ListView()
+                .tabItem {
+                    Label("Personagens", systemImage: "person")
+                }
+            FavoritesView()
+                .tabItem {
+                    Label("Favoritos", systemImage: "star.fill")
+                }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(FavoritosRepositorio())
     }
 }
+
+

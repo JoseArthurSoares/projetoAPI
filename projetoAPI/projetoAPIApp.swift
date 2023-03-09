@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct projetoAPIApp: App {
+    var favoritosRepo = FavoritosRepositorio()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritosRepo)
         }
     }
 }
