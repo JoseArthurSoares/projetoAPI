@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct gotCharacter: Decodable, Identifiable {
+struct gotCharacter: Decodable, Identifiable, Encodable {
     let id: Int
     let fullName: String
     let family: String

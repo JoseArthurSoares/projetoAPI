@@ -10,20 +10,33 @@ import SwiftUI
 struct ListView: View {
     @StateObject var vm = ViewModel()
     @EnvironmentObject var favoritosRepo: FavoritosRepositorio
-    
+    @State var isPressedConfig = false
+
     var body: some View {
         NavigationView {
                 List(vm.characters) { character in
                     NavigationLink(destination: DetailView(imagem: character.imageUrl, nome: character.fullName, familia: character.family)){
-                        BasicRowView(image: character.imageUrl, nome: character.fullName)
+                        BasicRowView(image: character.imageUrl, nome: character.fullName, isFavorite: favoritosRepo.isFavorite(gc: character))
                             .contextMenu {
                                 Button(action: {
-                                    favoritosRepo.addFavorites(gc: character)
+                                    if favoritosRepo.isFavorite(gc: character) {
+                                        favoritosRepo.removeFavorite(gc: character)
+                                    } else {
+                                        favoritosRepo.addFavorites(gc: character)
+                                    }
                                 }, label: {
-                                    HStack {
-                                        Text("Favorito")
-                                        Spacer()
-                                        Image(systemName: "star")
+                                    if favoritosRepo.isFavorite(gc: character) {
+                                        HStack {
+                                            Text("Desafavoritar")
+                                            Spacer()
+                                            Image(systemName: "star.slash.fill")
+                                        }
+                                    } else {
+                                        HStack {
+                                            Text("Favoritar")
+                                            Spacer()
+                                            Image(systemName: "star.fill")
+                                        }
                                     }
                                 })
                             }

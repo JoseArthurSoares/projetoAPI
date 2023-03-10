@@ -10,6 +10,7 @@ import SwiftUI
 struct BasicRowView: View {
     var image: String
     var nome: String
+    var isFavorite: Bool
     
     var body: some View {
         HStack {
@@ -21,13 +22,21 @@ struct BasicRowView: View {
             }, placeholder: {
                 ProgressView()
             })
+            
             Text(nome)
+            
+            Spacer()
+            
+            if isFavorite{
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
         }
     }
 }
 
 struct BasicRowView_Previews: PreviewProvider {
     static var previews: some View {
-        BasicRowView(image: "", nome: "")
+        BasicRowView(image: "", nome: "", isFavorite: false)
     }
 }

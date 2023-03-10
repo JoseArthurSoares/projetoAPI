@@ -14,6 +14,7 @@
 		417094FD29BA0F9C006AA0FC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417094FC29BA0F9C006AA0FC /* DetailView.swift */; };
 		417094FF29BA1C78006AA0FC /* FavoritosRepositorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417094FE29BA1C78006AA0FC /* FavoritosRepositorio.swift */; };
 		4170950329BA1F76006AA0FC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170950229BA1F76006AA0FC /* ListView.swift */; };
+		4186A0F229BA925B004AEBDB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4186A0F129BA925B004AEBDB /* SettingsView.swift */; };
 		41B8A39B29B9284B00D8F89B /* projetoAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A39A29B9284B00D8F89B /* projetoAPIApp.swift */; };
 		41B8A39D29B9284B00D8F89B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8A39C29B9284B00D8F89B /* ContentView.swift */; };
 		41B8A39F29B9284F00D8F89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B8A39E29B9284F00D8F89B /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		417094FC29BA0F9C006AA0FC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		417094FE29BA1C78006AA0FC /* FavoritosRepositorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosRepositorio.swift; sourceTree = "<group>"; };
 		4170950229BA1F76006AA0FC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		4186A0F129BA925B004AEBDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		41B8A39729B9284B00D8F89B /* projetoAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetoAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B8A39A29B9284B00D8F89B /* projetoAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projetoAPIApp.swift; sourceTree = "<group>"; };
 		41B8A39C29B9284B00D8F89B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				417094FE29BA1C78006AA0FC /* FavoritosRepositorio.swift */,
 				4170950229BA1F76006AA0FC /* ListView.swift */,
 				414758A029BA8278008D1DE9 /* FavoritesView.swift */,
+				4186A0F129BA925B004AEBDB /* SettingsView.swift */,
 			);
 			path = projetoAPI;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				417094FD29BA0F9C006AA0FC /* DetailView.swift in Sources */,
 				417094FB29BA0EC7006AA0FC /* BasicRowView.swift in Sources */,
 				417094F929BA0D81006AA0FC /* ListView-ViewModel.swift in Sources */,
+				4186A0F229BA925B004AEBDB /* SettingsView.swift in Sources */,
 				4170950329BA1F76006AA0FC /* ListView.swift in Sources */,
 				417094F529BA0CA7006AA0FC /* GotCharacterModel.swift in Sources */,
 				41B8A39B29B9284B00D8F89B /* projetoAPIApp.swift in Sources */,

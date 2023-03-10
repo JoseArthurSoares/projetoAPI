@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var favoritosRepo: FavoritosRepositorio
-    var body: some View {
+    @State var isGearPressed = false
+        var body: some View {
         TabView {
             ListView()
                 .tabItem {
@@ -19,6 +20,24 @@ struct ContentView: View {
                 .tabItem {
                     Label("Favoritos", systemImage: "star.fill")
                 }
+        }
+        .overlay {
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isGearPressed = true
+                    }, label: {
+                        Image(systemName: "gear")
+                            .font(.title)
+                    })
+                }
+                Spacer()
+            }
+            .padding()
+        }
+        .sheet(isPresented: $isGearPressed) {
+            SettingsView()
         }
     }
 }
